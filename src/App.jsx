@@ -64,33 +64,33 @@ const gemstoneFinishes = [
 ];
 
 const bakedFinishSwatches = [
-  { name: "Gold", color: "#d8a640" },
-  { name: "Ruby", color: "#b7223b" },
-  { name: "Diamond", color: "#f4f6f4" },
+  { name: "18K 金", color: "#d8a640" },
+  { name: "红宝石", color: "#b7223b" },
+  { name: "钻石", color: "#f4f6f4" },
 ];
 
 const collections = [
   {
-    title: "Eclipse Ring",
-    type: "Diamond, emerald, white gold",
-    price: "From $4,900",
+    title: "曜影戒指",
+    type: "白金戒托镶嵌钻石与祖母绿，适合订婚与周年纪念。",
+    price: "起价 $4,900",
     image: "/images/jewelry/collection-eclipse.png",
   },
   {
-    title: "Vela Earring",
-    type: "Mirror-polished gold, suspended diamond",
-    price: "From $3,400",
+    title: "星帆耳坠",
+    type: "镜面抛光金质耳饰，垂坠钻石在步履间捕捉光线。",
+    price: "起价 $3,400",
     image: "/images/jewelry/collection-vela.png",
   },
   {
-    title: "Pearl Line",
-    type: "Akoya pearls, hand-linked clasp",
-    price: "From $2,800",
+    title: "珍珠光线",
+    type: "甄选 Akoya 珍珠，手工串联成日常也能佩戴的柔光轮廓。",
+    price: "起价 $2,800",
     image: "/images/jewelry/collection-pearl.png",
   },
 ];
 
-const metrics = ["48 hour private sourcing", "18k recycled gold", "GIA-grade stones"];
+const metrics = ["48 小时私人选品", "18K 责任金材", "甄选高级宝石"];
 
 const applyModelMaterials = (viewer, metal, gemstone) => {
   const materials = viewer?.model?.materials;
@@ -138,24 +138,24 @@ const JewelryModel = ({ modelRef }) => (
       min-camera-orbit="auto 38deg auto"
       max-camera-orbit="auto 82deg auto"
       field-of-view="26deg"
-      alt="Ruby diamond gold necklace 3D model"
+      alt="Ruby diamond gold necklace"
     />
   </div>
 );
 
 const Nav = () => (
   <nav className="site-nav">
-    <a className="brand-mark" href="#top" aria-label="Lume Atelier home">
+    <a className="brand-mark" href="#top" aria-label="Lume Atelier 首页">
       <img src="/images/jewelry/lume-mark.svg" alt="" />
       <span>Lume</span>
     </a>
-    <div className="nav-links" aria-label="Primary navigation">
-      <a href="#atelier">Atelier</a>
-      <a href="#collections">Collections</a>
-      <a href="#custom">Custom</a>
+    <div className="nav-links" aria-label="主导航">
+      <a href="#atelier">工艺</a>
+      <a href="#collections">系列</a>
+      <a href="#custom">3D 鉴赏</a>
     </div>
     <a className="nav-action" href="#appointment">
-      Book viewing
+      预约鉴赏
     </a>
   </nav>
 );
@@ -321,15 +321,15 @@ function App() {
         </div>
 
         <div className="hero-copy">
-          <p className="eyebrow">High jewelry studio</p>
+          <p className="eyebrow">高级珠宝工坊</p>
           <h1 id="hero-title">Lume Atelier</h1>
           <p>
-            Sculptural rings, earrings, and heirloom pieces presented through a
-            cinematic 3D jewelry experience.
+            为重要时刻打造会被记住的珠宝。甄选钻石、红宝石与珍珠，
+            以高级工艺呈现可传承的光芒。
           </p>
           <div className="hero-actions">
-            <a href="#custom">View in 3D</a>
-            <a href="#collections">Explore line</a>
+            <a href="#custom">查看 3D 珠宝</a>
+            <a href="#collections">探索系列</a>
           </div>
         </div>
 
@@ -346,26 +346,25 @@ function App() {
 
       <section className="atelier-section" id="atelier">
         <div className="section-heading reveal-on-scroll">
-          <p className="eyebrow">Material language</p>
-          <h2>Quiet forms, sharp light, exacting stone work.</h2>
+          <p className="eyebrow">工艺与选石</p>
+          <h2>以宝石的火彩，回应每一次郑重选择。</h2>
         </div>
         <div className="atelier-grid">
           <div className="atelier-copy reveal-on-scroll">
             <p>
-              The site borrows the original project's dramatic reveal logic and
-              reworks it into a jewelry showroom: masked entrances, pinned
-              motion, layered product images, and a model-led focal point.
+              每一件 Lume 珠宝都从选石开始。我们关注净度、切工、色泽与佩戴比例，
+              让钻石的明亮、红宝石的深度和金属的温度在同一件作品里平衡。
             </p>
             <p>
-              Each piece is framed like an object of architecture, with enough
-              restraint for the gemstones to carry the color.
+              从日常佩戴到订婚、纪念日与私人礼赠，作品都以舒适结构和精细镶嵌完成，
+              让珍贵不止停留在展示柜里。
             </p>
           </div>
           <figure className="atelier-figure">
             <img
               className="atelier-image"
               src="/images/jewelry/hero-editorial.png"
-              alt="Diamond ring and earring on a graphite display surface"
+              alt="Diamond ring and earring on a display surface"
             />
           </figure>
         </div>
@@ -373,13 +372,13 @@ function App() {
 
       <section className="collection-section" id="collections">
         <div className="section-heading reveal-on-scroll">
-          <p className="eyebrow">Signature line</p>
-          <h2>Jewelry that reads from every angle.</h2>
+          <p className="eyebrow">臻选系列</p>
+          <h2>从第一眼心动，到日复一日佩戴。</h2>
         </div>
         <div className="collection-grid">
           {collections.map((item, index) => (
             <article className="collection-card" key={item.title}>
-              <img src={item.image} alt={`${item.title} jewelry product`} />
+              <img src={item.image} alt={`${item.title} jewelry`} />
               <div className="collection-card-copy">
                 <span>{`0${index + 1}`}</span>
                 <h3>{item.title}</h3>
@@ -393,14 +392,14 @@ function App() {
 
       <section className="config-section" id="custom">
         <div className="config-copy">
-          <p className="eyebrow">3D product study</p>
-          <h2>Study the finish around a live jewelry model.</h2>
+          <p className="eyebrow">在线鉴赏</p>
+          <h2>在线旋转珠宝，提前看见佩戴时的光。</h2>
           <p>
-            Rotate the supplied necklace model to inspect the gold body, ruby
-            stones, and diamond details as they catch the light.
+            通过 3D 模型查看项链的层次、宝石位置与金属反射。红宝石的浓郁色泽、
+            钻石的闪耀切面和 18K 金的温润光感，都可以在预约前先细看。
           </p>
 
-          <div className="material-controls material-summary" aria-label="Necklace material composition">
+          <div className="material-controls material-summary" aria-label="项链材质组成">
             {bakedFinishSwatches.map((item) => (
               <span className="finish-chip" key={item.name}>
                 <span style={{ background: item.color }} />
@@ -409,13 +408,13 @@ function App() {
             ))}
           </div>
 
-          <p className="finish-note">Gold setting. Ruby and diamond stones.</p>
+          <p className="finish-note">18K 金镶嵌，红宝石主石，钻石点缀。</p>
         </div>
 
         <div className="config-model">
           <div className="model-glow" />
           <JewelryModel modelRef={modelViewerRef} />
-          <div className="model-caption">Drag to rotate. Scroll keeps moving the page.</div>
+          <div className="model-caption">拖拽旋转珠宝，滚动继续浏览页面。</div>
         </div>
       </section>
 
@@ -423,16 +422,15 @@ function App() {
         <figure className="editorial-image reveal-on-scroll">
           <img
             src="/images/jewelry/collection-editorial.png"
-            alt="Pearl necklace, diamond bracelet, and sapphire ring in a display setting"
+            alt="Pearl necklace, diamond bracelet, and sapphire ring"
           />
         </figure>
         <div className="editorial-copy reveal-on-scroll">
-          <p className="eyebrow">Private collection</p>
-          <h2>Layered pearls, sapphire depth, diamond rhythm.</h2>
+          <p className="eyebrow">私人顾问</p>
+          <h2>为你的场合，挑选一件刚刚好的珠宝。</h2>
           <p>
-            The collection section shifts from the immersive 3D object into
-            a quieter editorial layout, keeping the same polished atmosphere
-            while giving each material its own space.
+            我们提供私人选品与定制建议。无论是婚礼、纪念日、商务晚宴，
+            还是一份值得珍藏的礼物，顾问都会根据预算、风格与佩戴场景推荐合适作品。
           </p>
         </div>
       </section>
@@ -440,9 +438,9 @@ function App() {
       <section className="appointment-section" id="appointment">
         <div>
           <p className="eyebrow">Lume Atelier</p>
-          <h2>Book a private viewing.</h2>
+          <h2>预约一场私人珠宝鉴赏。</h2>
         </div>
-        <a href="mailto:atelier@example.com">atelier@example.com</a>
+        <a href="mailto:atelier@example.com">预约顾问</a>
       </section>
     </main>
   );

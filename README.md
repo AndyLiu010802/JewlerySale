@@ -1,6 +1,6 @@
 # JewlerySale
 
-Vite and React jewelry showroom site with an interactive GLB necklace model.
+Lume Atelier 高级珠宝展示网站，包含系列宣传、私人预约入口与交互式 3D 项链鉴赏。
 
 ## Local Development
 
