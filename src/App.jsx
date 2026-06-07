@@ -64,33 +64,33 @@ const gemstoneFinishes = [
 ];
 
 const bakedFinishSwatches = [
-  { name: "18K 金", color: "#d8a640" },
-  { name: "红宝石", color: "#b7223b" },
-  { name: "钻石", color: "#f4f6f4" },
+  { name: "18K Gold", color: "#d8a640" },
+  { name: "Ruby", color: "#b7223b" },
+  { name: "Diamond", color: "#f4f6f4" },
 ];
 
 const collections = [
   {
-    title: "曜影戒指",
-    type: "白金戒托镶嵌钻石与祖母绿，适合订婚与周年纪念。",
-    price: "起价 $4,900",
+    title: "Eclipse Ring",
+    type: "White gold set with diamonds and emeralds, made for engagements and anniversaries.",
+    price: "From $4,900",
     image: "/images/jewelry/collection-eclipse.png",
   },
   {
-    title: "星帆耳坠",
-    type: "镜面抛光金质耳饰，垂坠钻石在步履间捕捉光线。",
-    price: "起价 $3,400",
+    title: "Vela Earring",
+    type: "Mirror-polished gold earrings with suspended diamonds that move with the light.",
+    price: "From $3,400",
     image: "/images/jewelry/collection-vela.png",
   },
   {
-    title: "珍珠光线",
-    type: "甄选 Akoya 珍珠，手工串联成日常也能佩戴的柔光轮廓。",
-    price: "起价 $2,800",
+    title: "Pearl Line",
+    type: "Selected Akoya pearls hand-linked into a soft luminous silhouette for everyday wear.",
+    price: "From $2,800",
     image: "/images/jewelry/collection-pearl.png",
   },
 ];
 
-const metrics = ["48 小时私人选品", "18K 责任金材", "甄选高级宝石"];
+const metrics = ["48 hour private sourcing", "18K responsible gold", "Fine gemstone selection"];
 
 const applyModelMaterials = (viewer, metal, gemstone) => {
   const materials = viewer?.model?.materials;
@@ -145,17 +145,17 @@ const JewelryModel = ({ modelRef }) => (
 
 const Nav = () => (
   <nav className="site-nav">
-    <a className="brand-mark" href="#top" aria-label="Lume Atelier 首页">
+    <a className="brand-mark" href="#top" aria-label="Lume Atelier home">
       <img src="/images/jewelry/lume-mark.svg" alt="" />
       <span>Lume</span>
     </a>
-    <div className="nav-links" aria-label="主导航">
-      <a href="#atelier">工艺</a>
-      <a href="#collections">系列</a>
-      <a href="#custom">3D 鉴赏</a>
+    <div className="nav-links" aria-label="Primary navigation">
+      <a href="#atelier">Craft</a>
+      <a href="#collections">Collections</a>
+      <a href="#custom">3D Preview</a>
     </div>
     <a className="nav-action" href="#appointment">
-      预约鉴赏
+      Book a viewing
     </a>
   </nav>
 );
@@ -321,15 +321,15 @@ function App() {
         </div>
 
         <div className="hero-copy">
-          <p className="eyebrow">高级珠宝工坊</p>
+          <p className="eyebrow">Fine jewelry atelier</p>
           <h1 id="hero-title">Lume Atelier</h1>
           <p>
-            为重要时刻打造会被记住的珠宝。甄选钻石、红宝石与珍珠，
-            以高级工艺呈现可传承的光芒。
+            Jewelry for moments that deserve to be remembered. Discover diamonds,
+            rubies, and pearls shaped into pieces made to be worn, gifted, and kept.
           </p>
           <div className="hero-actions">
-            <a href="#custom">查看 3D 珠宝</a>
-            <a href="#collections">探索系列</a>
+            <a href="#custom">View in 3D</a>
+            <a href="#collections">Explore collections</a>
           </div>
         </div>
 
@@ -346,18 +346,19 @@ function App() {
 
       <section className="atelier-section" id="atelier">
         <div className="section-heading reveal-on-scroll">
-          <p className="eyebrow">工艺与选石</p>
-          <h2>以宝石的火彩，回应每一次郑重选择。</h2>
+          <p className="eyebrow">Craft and stones</p>
+          <h2>Precious materials, shaped for meaningful occasions.</h2>
         </div>
         <div className="atelier-grid">
           <div className="atelier-copy reveal-on-scroll">
             <p>
-              每一件 Lume 珠宝都从选石开始。我们关注净度、切工、色泽与佩戴比例，
-              让钻石的明亮、红宝石的深度和金属的温度在同一件作品里平衡。
+              Every Lume piece begins with the stone. We consider clarity, cut,
+              color, and proportion so the brilliance of diamonds, the depth of
+              rubies, and the warmth of gold feel balanced from every angle.
             </p>
             <p>
-              从日常佩戴到订婚、纪念日与私人礼赠，作品都以舒适结构和精细镶嵌完成，
-              让珍贵不止停留在展示柜里。
+              From daily signatures to engagement gifts and anniversary pieces,
+              each design is finished with refined settings and wearable comfort.
             </p>
           </div>
           <figure className="atelier-figure">
@@ -372,8 +373,8 @@ function App() {
 
       <section className="collection-section" id="collections">
         <div className="section-heading reveal-on-scroll">
-          <p className="eyebrow">臻选系列</p>
-          <h2>从第一眼心动，到日复一日佩戴。</h2>
+          <p className="eyebrow">Signature collections</p>
+          <h2>Designed for first impressions and everyday return.</h2>
         </div>
         <div className="collection-grid">
           {collections.map((item, index) => (
@@ -392,14 +393,15 @@ function App() {
 
       <section className="config-section" id="custom">
         <div className="config-copy">
-          <p className="eyebrow">在线鉴赏</p>
-          <h2>在线旋转珠宝，提前看见佩戴时的光。</h2>
+          <p className="eyebrow">Interactive preview</p>
+          <h2>Rotate the piece and study how the light moves.</h2>
           <p>
-            通过 3D 模型查看项链的层次、宝石位置与金属反射。红宝石的浓郁色泽、
-            钻石的闪耀切面和 18K 金的温润光感，都可以在预约前先细看。
+            Explore the necklace in 3D before booking a private appointment.
+            Inspect the gold setting, ruby center stones, and diamond accents
+            as they catch reflections from different angles.
           </p>
 
-          <div className="material-controls material-summary" aria-label="项链材质组成">
+          <div className="material-controls material-summary" aria-label="Necklace material composition">
             {bakedFinishSwatches.map((item) => (
               <span className="finish-chip" key={item.name}>
                 <span style={{ background: item.color }} />
@@ -408,13 +410,13 @@ function App() {
             ))}
           </div>
 
-          <p className="finish-note">18K 金镶嵌，红宝石主石，钻石点缀。</p>
+          <p className="finish-note">18K gold setting with ruby stones and diamond accents.</p>
         </div>
 
         <div className="config-model">
           <div className="model-glow" />
           <JewelryModel modelRef={modelViewerRef} />
-          <div className="model-caption">拖拽旋转珠宝，滚动继续浏览页面。</div>
+          <div className="model-caption">Drag to rotate the piece. Scroll continues through the page.</div>
         </div>
       </section>
 
@@ -426,11 +428,12 @@ function App() {
           />
         </figure>
         <div className="editorial-copy reveal-on-scroll">
-          <p className="eyebrow">私人顾问</p>
-          <h2>为你的场合，挑选一件刚刚好的珠宝。</h2>
+          <p className="eyebrow">Private service</p>
+          <h2>Find the piece that feels right for the occasion.</h2>
           <p>
-            我们提供私人选品与定制建议。无论是婚礼、纪念日、商务晚宴，
-            还是一份值得珍藏的礼物，顾问都会根据预算、风格与佩戴场景推荐合适作品。
+            Our advisors offer private sourcing and styling guidance for weddings,
+            anniversaries, evening events, and gifts made to be remembered.
+            Each recommendation is shaped around budget, taste, and wearability.
           </p>
         </div>
       </section>
@@ -438,9 +441,9 @@ function App() {
       <section className="appointment-section" id="appointment">
         <div>
           <p className="eyebrow">Lume Atelier</p>
-          <h2>预约一场私人珠宝鉴赏。</h2>
+          <h2>Book a private jewelry viewing.</h2>
         </div>
-        <a href="mailto:atelier@example.com">预约顾问</a>
+        <a href="mailto:atelier@example.com">Contact an advisor</a>
       </section>
     </main>
   );

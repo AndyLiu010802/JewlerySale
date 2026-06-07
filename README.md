@@ -1,6 +1,6 @@
 # JewlerySale
 
-Lume Atelier 高级珠宝展示网站，包含系列宣传、私人预约入口与交互式 3D 项链鉴赏。
+Lume Atelier is a fine jewelry showcase site with collection storytelling, private viewing calls to action, and an interactive 3D necklace preview.
 
 ## Local Development
 
